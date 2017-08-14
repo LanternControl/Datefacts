@@ -17,7 +17,7 @@ let secondsInDay = chalk.blueBright(mmt.diff(moment().hour(0).minute(0).second(0
 
 console.log("It is " + secondsInDay + " seconds into the day.")
 
-let savings = (moment().isDST());
+let savings = moment().isDST();
 
 if(moment().isDST() === true) {
   savings = chalk.green("is");
@@ -26,3 +26,13 @@ if(moment().isDST() === true) {
 }
 
 console.log("It " + savings + " during Daylight Savings Time.");
+
+let leap = moment().isLeapYear();
+
+if(moment().isLeapYear() === true) {
+  leap = chalk.red("is");
+} else {
+  leap = chalk.red("isn't");
+}
+
+console.log("It " + leap + " a leap year.");
