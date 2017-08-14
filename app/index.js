@@ -17,9 +17,12 @@ let secondsInDay = chalk.blueBright(mmt.diff(moment().hour(0).minute(0).second(0
 
 console.log("It is " + secondsInDay + " seconds into the day.")
 
-let savings = chalk.green(moment().isDST());
-if(moment().isDST(); === true;
-return "is"
+let savings = (moment().isDST());
 
+if(moment().isDST() === true) {
+  savings = chalk.green("is");
+} else {
+  savings = chalk.green("isn't");
+}
 
 console.log("It " + savings + " during Daylight Savings Time.");
